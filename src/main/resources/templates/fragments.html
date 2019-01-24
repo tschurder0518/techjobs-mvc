@@ -27,7 +27,7 @@
         </div>
     </div>
     <div th:fragment="allJobs">
-    	<h2 th:text="${#lists.size(jobs)} + ' Result(s)'"></h2>
+    	<!-- <h2 th:text="${#lists.size(jobs)} + ' Result(s)'"></h2> -->
 		<table th:each="job : ${jobs}" th:class="job-listing">
 				<tr th:each="jobEntry : ${job}">
 					<td th:text="${#strings.capitalizeWords(jobEntry.key)}"></td>

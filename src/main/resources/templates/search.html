@@ -37,9 +37,11 @@
     <hr />
 
     <!-- TODO #2 - Loop over jobs map to display all job fields -->
-    <h2></h2>
-	<table th:replace="fragments :: allJobs"></table>
-</div>
+    <!-- <div th:if = "${jobs.size()}"> -->
+    <h2 th:text="${#lists.size(jobs)} + ' Result(s)'"></h2>
+    <table th:replace="fragments :: allJobs"></table>
+	</div>
+
 
 </body>
 </html>
